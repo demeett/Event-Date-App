@@ -10,9 +10,10 @@ class FavoriteListTile extends StatelessWidget {
     return Card(
       child: ListTile(
         leading: const Icon(Icons.calendar_month),
-        title: Text(event.title ??  ""),
-        subtitle: Text(event.location ?? ""),
-        trailing: const Icon(Icons.arrow_circle_right_rounded, color: Colors.red),
+        title: Text(event.name ?? ""),
+        subtitle: Text(event.nationality ?? ""),
+        trailing:
+            const Icon(Icons.arrow_circle_right_rounded, color: Colors.red),
       ),
     );
   }

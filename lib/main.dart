@@ -1,10 +1,15 @@
+import 'package:event_date_app/core/viewmodel/common_view_model.dart';
 import 'package:flutter/material.dart';
 
 import 'core/theme/theme.dart';
 import 'features/add_event/add_event.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    child: const MyApp(),
+    create: (BuildContext context) => CommonViewModel(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

@@ -1,15 +1,11 @@
 class EventModel {
   final String? id;
-  final String? title;
-  final String? description;
+  final String? email;
+  final String? password;
+  final String? name;
   final DateTime? dateTime;
-  final String? location;
+  final String? nationality;
 
-  EventModel({
-    this.id,
-    this.title,
-    this.description,
-    this.dateTime,
-    this.location,
-  });
+  EventModel(this.id, this.email, this.password, this.name, this.dateTime,
+      this.nationality);
 }
