@@ -21,7 +21,7 @@ class _FavoritePageState extends State<FavoritePage> {
       ),
       body: Consumer<CommonViewModel>(
         builder: (context, value, child) {
-          if (value.favoritesItemCount == 0) {
+          if (value.isEmpty) {
             return const Center(child: Text('Veri yok'));
           }
 

@@ -24,4 +24,6 @@ class CommonViewModel extends ChangeNotifier {
   }
 
   EventModel getEventModelItemAt(int index) => eventList[index];
+
+  bool get isEmpty => eventList.isEmpty;
 }

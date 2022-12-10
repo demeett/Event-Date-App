@@ -10,16 +10,19 @@ class FavoriteListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<CommonViewModel>(context);
-    return Card(
-      child: ListTile(
-        leading: const Icon(Icons.calendar_month),
-        title: Text(event.name ?? ""),
-        subtitle: Text(event.nationality ?? ""),
-        trailing: IconButton(
-            onPressed: () {
-              provider.removeFavorite(id: event.id ?? "");
-            },
-            icon: const Icon(Icons.arrow_circle_right_rounded, color: Colors.red)),
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: Card(
+        child: ListTile(
+          leading: const Icon(Icons.calendar_month),
+          title: Text(event.name ?? ""),
+          subtitle: Text(event.nationality ?? ""),
+          trailing: IconButton(
+              onPressed: () {
+                provider.removeFavorite(id: event.id ?? "");
+              },
+              icon: const Icon(Icons.arrow_circle_right_rounded, color: Colors.red)),
+        ),
       ),
     );
   }
