@@ -1,4 +1,5 @@
 import 'package:event_date_app/core/core.dart';
+import 'package:event_date_app/features/favorite/favorite.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/resouces/resources.dart';
@@ -15,6 +16,14 @@ class _AddEventViewState extends State<AddEventView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: AppTheme.instance.themeData.primaryColor,
+        actions: [
+          IconButton(onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => FavoritePage()));
+          }, icon: Icon(Icons.favorite))
+        ],
+      ),
       body: Column(
         children: [
           Container(
