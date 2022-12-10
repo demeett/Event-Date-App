@@ -7,12 +7,9 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        fillColor: Colors.grey,
+        fillColor: Colors.grey[300],
         filled: true,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        icon: const Icon(Icons.person),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: BorderSide.none),
         hintText: 'What do people call you?',
         labelText: 'Name *',
       ),
