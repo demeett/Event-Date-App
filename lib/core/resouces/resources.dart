@@ -9,5 +9,6 @@ class _Images {
 
 class _Strings {
   final welcome = "Welcome to Evento";
+  final welcomeSubTitle = "Create an acount with us & enjoy all the our exciting event";
   
 }

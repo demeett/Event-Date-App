@@ -41,6 +41,7 @@ class _AddEventViewState extends State<AddEventView> {
                   R.strings.welcome,
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
+                Text(R.strings.welcomeSubTitle, )
               ],
             ),
           ),
