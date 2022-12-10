@@ -1,5 +1,7 @@
 import 'package:event_date_app/core/core.dart';
+import 'package:event_date_app/core/viewmodel/common_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class FavoriteListTile extends StatelessWidget {
   final EventModel event;
@@ -7,13 +9,17 @@ class FavoriteListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<CommonViewModel>(context);
     return Card(
       child: ListTile(
         leading: const Icon(Icons.calendar_month),
         title: Text(event.name ?? ""),
         subtitle: Text(event.nationality ?? ""),
-        trailing:
-            const Icon(Icons.arrow_circle_right_rounded, color: Colors.red),
+        trailing: IconButton(
+            onPressed: () {
+              provider.removeFavorite(id: event.id ?? "");
+            },
+            icon: const Icon(Icons.arrow_circle_right_rounded, color: Colors.red)),
       ),
     );
   }

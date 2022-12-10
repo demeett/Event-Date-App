@@ -46,8 +46,7 @@ class _AddEventViewState extends State<AddEventView> {
                 ),
                 Text(
                   R.strings.welcome,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 15),
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
                 Text(
                   R.strings.welcomeSubTitle,
@@ -90,8 +89,7 @@ class _AddEventViewState extends State<AddEventView> {
                               padding: EdgeInsets.all(8.0),
                               child: FormTitle(title: "Date of Birth"),
                             ),
-                            CustomTextFormField(
-                                title: "title", controller: birthController),
+                            CustomTextFormField(title: "title", controller: birthController),
                           ],
                         )),
                         const SizedBox(
@@ -129,8 +127,7 @@ class _AddEventViewState extends State<AddEventView> {
                           height: 50,
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      AppTheme.instance.themeData.primaryColor,
+                                  backgroundColor: AppTheme.instance.themeData.primaryColor,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(18.0),
                                   )),
@@ -141,7 +138,7 @@ class _AddEventViewState extends State<AddEventView> {
                                         emailController.text,
                                         passwordController.text,
                                         nameController.text,
-                                        DateTime.parse(birthController.text),
+                                        DateTime.now(),
                                         nationalityController.text,
                                       ),
                                     );

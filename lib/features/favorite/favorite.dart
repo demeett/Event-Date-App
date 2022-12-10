@@ -20,12 +20,19 @@ class _FavoritePageState extends State<FavoritePage> {
         backgroundColor: AppTheme.instance.themeData.primaryColor,
       ),
       body: Consumer<CommonViewModel>(
-        builder: (context, value, child) => ListView.builder(
+        builder: (context, value, child) {
+          if (value.favoritesItemCount == 0) {
+            return const Center(child: Text('Veri yok'));
+          }
+
+          return ListView.builder(
             itemCount: value.favoritesItemCount,
-            itemBuilder: ((context, index) {
+            itemBuilder: (context, index) {
               var event = value.getEventModelItemAt(index);
               return FavoriteListTile(event: event);
-            })),
+            },
+          );
+        },
       ),
     );
   }
