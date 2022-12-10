@@ -12,7 +12,8 @@ class FormTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: context.theme.textTheme.bodyText1,
+      textAlign: TextAlign.start,
+      style: context.theme.textTheme.bodyText1?.copyWith(color: Colors.grey[700], letterSpacing: 1),
     );
   }
 }
