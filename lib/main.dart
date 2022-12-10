@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/theme/theme.dart';
-import 'features/add_event/add_event.dart';
+import 'features/add_event/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.instance.themeData,
-      home: const AddEventView(),
+      home: const Home(),
     );
   }
 }
