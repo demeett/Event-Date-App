@@ -1,3 +1,4 @@
+import 'package:event_date_app/core/core.dart';
 import 'package:flutter/material.dart';
 
 class FormTitle extends StatelessWidget {
@@ -11,6 +12,7 @@ class FormTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
+      style: context.theme.textTheme.bodyText1,
     );
   }
 }
