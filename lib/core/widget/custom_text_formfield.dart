@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField({super.key});
-
+  const CustomTextFormField({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -10,8 +10,7 @@ class CustomTextFormField extends StatelessWidget {
         fillColor: Colors.grey[300],
         filled: true,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: BorderSide.none),
-        hintText: 'What do people call you?',
-        labelText: 'Name *',
+        hintText:title,
       ),
       onSaved: (String? value) {
         // This optional block of code can be used to run
